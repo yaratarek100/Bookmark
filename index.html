@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- title icon -->
+    <link rel="icon" href="imges/bookmark.png" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstab style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- css file -->
+  </head>
+  <body>
+    <main class="">
+      <div class="container">
+        <h1 class="title-f">Bookmarker</h1>
+
+        <form  >
+          <h2>
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="in-groub">
+            <label>
+              <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+            >
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Bookmark Name"
+              name="site-name"
+              id="siteName"
+              oninput="validation(this)"
+              />
+            </div>
+            <div class="in-groub">
+              <label> <i class="fa-solid fa-link pe-2"></i> Site URL</label>
+              <input
+              class="form-control"
+              type="text"
+              placeholder="Website URL"
+              name="site-url"
+              id="siteUrl"
+              oninput="validation(this)"
+            />
+          </div>
+
+          <button type="submit" id="submit" class="btn">Submit</button>
+        </form>
+
+        <!-- <div class="data-table"> -->
+        <table class="table" id="my-table">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+            <!-- <tr>
+              <td>0</td>
+              <td>kjmnvkem.l</td>
+              <td>
+                <a class="btn row-b visit-b" href="https://getbootstrap.com" target="_blank" >
+                  <i class="fa-solid fa-eye pe-2"></i> Visit
+                </a>
+              </td>
+              <td>
+                <button class="btn row-b del-b" onclick="deleteElement(0)">
+                  <i class="fa-solid fa-trash-can"></i> Delete
+                </button>
+              </td>
+            </tr> -->
+
+          </tbody>
+        </table>
+
+        <!-- ============================hidden====================  -->
+        <div class="layer d-none">
+          <div class="alert">
+            <div class="top">
+              <div class="circles">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <button class="btn" id="closeBtn">
+                <i class="fa-solid fa-xmark close fs-3"></i>
+              </button>
+            </div>
+
+            <p>
+              Site Name or Url is not valid, Please follow <br />
+              rules below :
+            </p>
+
+            <ol>
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i> Site name must
+                contain at least 3 characters
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-right p-2"></i> Site URL must be
+                a valid one
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
